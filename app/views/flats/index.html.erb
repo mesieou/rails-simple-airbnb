@@ -1,0 +1,26 @@
+<div class="bg-light d-flex space-between">
+ <h3> Simple Airbnb</h3>
+ <%# <%= link_to "More info", new_restaurant_path %> %>
+</div>
+<div class="container">
+  <h1>All our Flats (<%= @flats.length %>) </h1>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="card col-md-6 p-2">
+        <div class="card_expludes_link bg-light">
+          <h2><%= flat.name %></h2>
+          <p><%= flat.address %></p>
+          <div class="number_and_price">
+            <i class="fa-regular fa-money-bill-1"></i>
+            <%= flat.price_per_night %>
+            <i class="fa-solid fa-person"></i>
+            <%= flat.number_of_guests %>
+          </div>
+        </div>
+        <div class="container">
+          <%= link_to "More info", flat_path(flat) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

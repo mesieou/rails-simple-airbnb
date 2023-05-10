@@ -1,0 +1,28 @@
+<div class="bg-light d-flex justify-content-between mg-3">
+  <h3> Simple Airbnb</h3>
+  <%= link_to "Back home", flats_path %>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1567496898669-ee935f5f647a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80);">
+  <div class="container">
+  </div>
+</div>
+
+ <div class="container bg-light">
+  <div class="row margin-top-negative">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-12">
+          <h1><%= @flat.name %></h1>
+          <p><%= @flat.address%></p>
+        </div>
+        <div class="col-12">
+          <h3> A bit more about this flat...</h3>
+          <p><%= @flat.description%></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>
+ </div>
